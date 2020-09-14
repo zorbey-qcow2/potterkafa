@@ -5,7 +5,9 @@ function baslikCek()
     return 'Evler';
 }
 
-$evler = file_get_contents('https://www.potterapi.com/v1/houses?key=$2a$10$x4.Fv0K2Pjf.QN44jS.hOeNTuVrkIbOHt8YLKaLkq/cvRwPXiS3/G');
+$config = include 'config.php';
+
+$evler = file_get_contents("https://www.potterapi.com/v1/houses?key={$config['api_key']}");
 
 $cozulmusEvler = json_decode($evler,true);
 
