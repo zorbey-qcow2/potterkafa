@@ -10,4 +10,4 @@
 
     <title><?php echo baslikCek() ?></title>
 </head>
-<body>
+<body class="bg-light">
